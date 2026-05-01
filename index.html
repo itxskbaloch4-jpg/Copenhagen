@@ -1,85 +1,470 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Copenhagen Construction Company | Din lokale håndværker</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .hero-gradient {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1200');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Copenhagen Construction Company | Renovering, VVS, Elektriker & Tømrer i København</title>
+  <meta name="description" content="Professionelt byggefirma i København med ekspertise inden for renovering, VVS, elektrikerarbejde, tømrerarbejde, maling, gulve, fliser og totalentreprise. Ring nu for gratis tilbud." />
+  <meta name="keywords" content="construction company Copenhagen, håndværker København, renovering København, VVS København, elektriker København, tømrer København, maler København, gulvlægning København, byggefirma Danmark" />
+  <meta name="author" content="Copenhagen Construction Company" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Copenhagen Construction Company" />
+  <meta property="og:description" content="Professionel renovering, VVS, el-arbejde og tømrerarbejde i København." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80" />
+  <meta property="og:locale" content="da_DK" />
+
+  <!-- Local SEO -->
+  <meta name="geo.region" content="DK-84">
+  <meta name="geo.placename" content="København">
+  <meta name="geo.position" content="55.6721;12.5402">
+  <meta name="ICBM" content="55.6721, 12.5402">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://images.unsplash.com">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Copenhagen Construction Company",
+    "image":"https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80",
+    "telephone":"+45 27 21 58 61",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Ny Carlsberg Vej 19, st. Th",
+      "addressLocality":"København",
+      "postalCode":"1760",
+      "addressCountry":"DK"
+    },
+    "url":"https://yourdomain.com",
+    "priceRange":"$$",
+    "openingHours":"Mo-Fr 08:00-17:00",
+    "description":"Professionel bygge- og renoveringsvirksomhed i København med speciale i VVS, elektriker, maling, gulve og totalrenovering."
+  }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(5,10,20,0.75), rgba(5,10,20,0.75)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+    }
+  </style>
 </head>
-<body class="bg-gray-50 font-sans">
 
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <i data-lucide="hard-hat" class="text-orange-600 w-8 h-8"></i>
-                <span class="font-bold text-lg uppercase tracking-tighter">Copenhagen <span class="text-orange-600">Construction</span></span>
-            </div>
-            <a href="tel:+4527215861" class="bg-orange-600 text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-orange-700 transition">
-                <i data-lucide="phone" class="w-4 h-4"></i>
-                Ring Nu
-            </a>
-        </div>
-    </header>
+<body class="bg-slate-950 text-white">
 
-    <section class="hero-gradient h-[80vh] flex items-center justify-center text-center text-white px-4">
-        <div class="max-w-3xl">
-            <div class="flex justify-center mb-6">
-                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
-                    <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span> Åbent nu · Lukker kl. 17
-                </span>
-            </div>
-            <h1 class="text-4xl md:text-6xl font-black mb-6">Professionel Renovering i København</h1>
-            <p class="text-xl text-gray-200 mb-10">Vi tilbyder alt fra VVS og el-arbejde til murer- og tømreropgaver med fokus på høj kvalitet.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+4527215861" class="bg-orange-600 text-white px-10 py-5 rounded-xl text-xl font-bold flex items-center justify-center gap-3 hover:scale-105 transition shadow-2xl">
-                    <i data-lucide="phone-call" class="w-6 h-6"></i>
-                    +45 27 21 58 61
-                </a>
-                <a href="#map" class="bg-white text-gray-900 px-10 py-5 rounded-xl text-xl font-bold flex items-center justify-center gap-3 hover:bg-gray-100 transition">
-                    <i data-lucide="map-pin" class="w-6 h-6"></i>
-                    Find os
-                </a>
-            </div>
-        </div>
-    </section>
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
 
-    <section class="py-16 max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12 uppercase tracking-wide">Vores Services</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                <i data-lucide="paint-bucket" class="w-8 h-8 mx-auto text-orange-600 mb-3"></i>
-                <p class="font-bold">Maler</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                <i data-lucide="droplet" class="w-8 h-8 mx-auto text-orange-600 mb-3"></i>
-                <p class="font-bold">VVS</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                <i data-lucide="zap" class="w-8 h-8 mx-auto text-orange-600 mb-3"></i>
-                <p class="font-bold">Elektriker</p>
-            </div>
-            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                <i data-lucide="hammer" class="w-8 h-8 mx-auto text-orange-600 mb-3"></i>
-                <p class="font-bold">Tømrer</p>
-            </div>
+      <div class="flex items-center gap-3">
+        <div class="bg-cyan-500 p-2 rounded-xl">
+          <i data-lucide="building-2" class="w-6 h-6 text-white"></i>
         </div>
-        <div class="mt-8 bg-gray-100 p-6 rounded-2xl text-sm text-gray-600 flex flex-wrap justify-center gap-4">
-            <span>• Floor fitting</span> <span>• Tile work</span> <span>• Drywall</span> <span>• Interior decorating</span> <span>• Demolition</span> <span>• Remodelling</span>
-        </div>
-    </section>
 
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex items-center justify-center gap-2 mb-8">
-                <div class="flex text-yellow-400">
-                    <i data-lucide="star" class="fill-current"></i>
-  
+        <div>
+          <h2 class="font-black text-xl tracking-tight">
+            Copenhagen Construction
+          </h2>
+          <p class="text-slate-400 text-sm">
+            Renovering & Byggeri i København
+          </p>
+        </div>
+      </div>
+
+      <a href="tel:+4527215861"
+        class="hidden md:flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 transition px-6 py-3 rounded-xl font-bold text-slate-950 shadow-2xl">
+        <i data-lucide="phone-call" class="w-5 h-5"></i>
+        +45 27 21 58 61
+      </a>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero min-h-screen flex items-center pt-24">
+
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+
+      <div>
+
+        <div class="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/30 px-4 py-2 rounded-full text-green-300 font-semibold mb-6">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          Åbent Nu · Lukker kl. 17
+        </div>
+
+        <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-6">
+          Professionel
+          <span class="text-cyan-400">Renovering</span>
+          i København
+        </h1>
+
+        <p class="text-slate-300 text-xl leading-relaxed mb-8">
+          Copenhagen Construction Company leverer professionelle løsninger inden for renovering, VVS, elektrikerarbejde, tømrerarbejde, gulve, fliser og totalentreprise i hele København.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+
+          <a href="tel:+4527215861"
+            class="bg-cyan-500 hover:bg-cyan-400 transition text-slate-950 px-8 py-5 rounded-2xl font-black text-lg flex items-center justify-center gap-3 shadow-2xl">
+            <i data-lucide="phone"></i>
+            Ring Nu
+          </a>
+
+          <a href="#map"
+            class="glass hover:bg-white/10 transition px-8 py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3">
+            <i data-lucide="map-pin"></i>
+            Find Lokation
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Side Card -->
+      <div class="glass rounded-3xl p-8 shadow-2xl">
+
+        <h3 class="text-3xl font-black mb-6">
+          Hvorfor Vælge Os?
+        </h3>
+
+        <div class="space-y-5">
+
+          <div class="flex gap-4">
+            <div class="bg-cyan-500 p-3 rounded-xl h-fit">
+              <i data-lucide="shield-check"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-xl mb-1">Erfarne Håndværkere</h4>
+              <p class="text-slate-300">
+                Professionelt team med erfaring i alle typer bygge- og renoveringsprojekter.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="bg-cyan-500 p-3 rounded-xl h-fit">
+              <i data-lucide="clock-3"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-xl mb-1">Hurtig Service</h4>
+              <p class="text-slate-300">
+                Vi leverer kvalitetsarbejde til tiden med fokus på detaljer og kundetilfredshed.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="bg-cyan-500 p-3 rounded-xl h-fit">
+              <i data-lucide="badge-check"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-xl mb-1">Høj Kvalitet</h4>
+              <p class="text-slate-300">
+                Vi bruger moderne materialer og professionelle løsninger til alle projekter.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+  <section class="py-24 bg-slate-900">
+
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="text-center mb-16">
+        <p class="text-cyan-400 font-bold uppercase tracking-[4px] mb-3">
+          Vores Services
+        </p>
+
+        <h2 class="text-5xl font-black mb-6">
+          Professionelle Byggeløsninger
+        </h2>
+
+        <p class="text-slate-400 max-w-3xl mx-auto text-lg">
+          Vi tilbyder komplette løsninger inden for byggeri, renovering og installation i København og omegn.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- CARD -->
+        <div class="service-card bg-slate-950 border border-slate-800 rounded-3xl p-8 transition duration-300">
+          <div class="bg-cyan-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="paint-bucket"></i>
+          </div>
+
+          <h3 class="text-2xl font-black mb-4">Malerarbejde</h3>
+
+          <p class="text-slate-400 leading-relaxed">
+            Professionel indvendig og udvendig maling til boliger, lejligheder og erhverv.
+          </p>
+
+          <p class="text-slate-500 mt-3">
+            Vi leverer moderne finish med fokus på kvalitet, holdbarhed og æstetik.
+          </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="service-card bg-slate-950 border border-slate-800 rounded-3xl p-8 transition duration-300">
+          <div class="bg-cyan-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="droplets"></i>
+          </div>
+
+          <h3 class="text-2xl font-black mb-4">VVS Service</h3>
+
+          <p class="text-slate-400 leading-relaxed">
+            Installation og reparation af vandinstallationer, armaturer og badeværelser.
+          </p>
+
+          <p class="text-slate-500 mt-3">
+            Hurtig og sikker VVS-service udført af professionelle håndværkere.
+          </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="service-card bg-slate-950 border border-slate-800 rounded-3xl p-8 transition duration-300">
+          <div class="bg-cyan-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="zap"></i>
+          </div>
+
+          <h3 class="text-2xl font-black mb-4">Elektriker</h3>
+
+          <p class="text-slate-400 leading-relaxed">
+            Moderne elektriske installationer til hjem, kontorer og erhvervsbygninger.
+          </p>
+
+          <p class="text-slate-500 mt-3">
+            Sikker el-service med fokus på energieffektive løsninger og høj standard.
+          </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="service-card bg-slate-950 border border-slate-800 rounded-3xl p-8 transition duration-300">
+          <div class="bg-cyan-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="hammer"></i>
+          </div>
+
+          <h3 class="text-2xl font-black mb-4">Tømrerarbejde</h3>
+
+          <p class="text-slate-400 leading-relaxed">
+            Specialiserede løsninger inden for træarbejde, tagarbejde og konstruktion.
+          </p>
+
+          <p class="text-slate-500 mt-3">
+            Skræddersyede løsninger til både små og store byggeprojekter.
+          </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="service-card bg-slate-950 border border-slate-800 rounded-3xl p-8 transition duration-300">
+          <div class="bg-cyan-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="layout-grid"></i>
+          </div>
+
+          <h3 class="text-2xl font-black mb-4">Gulve & Fliser</h3>
+
+          <p class="text-slate-400 leading-relaxed">
+            Montering af moderne gulve og flisearbejde til køkken, bad og stuer.
+          </p>
+
+          <p class="text-slate-500 mt-3">
+            Holdbare materialer og præcisionsarbejde til perfekte resultater.
+          </p>
+        </div>
+
+        <!-- CARD -->
+        <div class="service-card bg-slate-950 border border-slate-800 rounded-3xl p-8 transition duration-300">
+          <div class="bg-cyan-500 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="building"></i>
+          </div>
+
+          <h3 class="text-2xl font-black mb-4">Totalrenovering</h3>
+
+          <p class="text-slate-400 leading-relaxed">
+            Komplet renovering af boliger og erhverv med moderne design og kvalitet.
+          </p>
+
+          <p class="text-slate-500 mt-3">
+            Vi håndterer hele projektet fra planlægning til færdigt resultat.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24">
+
+    <div class="max-w-5xl mx-auto px-4 text-center">
+
+      <div class="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-[40px] p-12 shadow-2xl">
+
+        <h2 class="text-5xl font-black text-slate-950 mb-6">
+          Har Du Brug For Et Tilbud?
+        </h2>
+
+        <p class="text-slate-900 text-xl max-w-3xl mx-auto mb-10">
+          Kontakt Copenhagen Construction Company i dag for professionel rådgivning og gratis prisoverslag.
+        </p>
+
+        <a href="tel:+4527215861"
+          class="inline-flex items-center gap-3 bg-slate-950 text-white px-10 py-5 rounded-2xl text-xl font-black hover:scale-105 transition">
+          <i data-lucide="phone-call"></i>
+          +45 27 21 58 61
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- MAP -->
+  <section id="map" class="py-20 bg-slate-900">
+
+    <div class="max-w-7xl mx-auto px-4">
+
+      <div class="text-center mb-12">
+        <h2 class="text-5xl font-black mb-5">
+          Find Os i København
+        </h2>
+
+        <p class="text-slate-400 text-lg">
+          Ny Carlsberg Vej 19, st. Th, 1760 København, Denmark
+        </p>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+        <iframe
+          src="https://www.google.com/maps?q=Ny+Carlsberg+Vej+19,+1760+K%C3%B8benhavn,+Denmark&output=embed"
+          width="100%"
+          height="500"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-12">
+
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+
+      <div>
+        <h3 class="text-2xl font-black mb-4">
+          Copenhagen Construction
+        </h3>
+
+        <p class="text-slate-400 leading-relaxed">
+          Professionel bygge- og renoveringsservice i København med fokus på kvalitet, pålidelighed og moderne løsninger.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-xl mb-4">
+          Kontakt
+        </h4>
+
+        <div class="space-y-3 text-slate-400">
+
+          <p class="flex items-center gap-3">
+            <i data-lucide="phone"></i>
+            +45 27 21 58 61
+          </p>
+
+          <p class="flex items-center gap-3">
+            <i data-lucide="map-pin"></i>
+            Ny Carlsberg Vej 19, 1760 København
+          </p>
+
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-xl mb-4">
+          Services
+        </h4>
+
+        <div class="space-y-2 text-slate-400">
+          <p>• VVS</p>
+          <p>• Elektriker</p>
+          <p>• Tømrer</p>
+          <p>• Maler</p>
+          <p>• Gulvlægning</p>
+          <p>• Totalrenovering</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500">
+      © 2026 Copenhagen Construction Company. Alle rettigheder forbeholdes.
+    </div>
+
+  </footer>
+
+  <!-- Mobile Call Button -->
+  <a href="tel:+4527215861"
+    class="md:hidden fixed bottom-5 left-5 right-5 bg-cyan-500 text-slate-950 py-4 rounded-2xl font-black text-center shadow-2xl z-50 flex items-center justify-center gap-2">
+    <i data-lucide="phone-call"></i>
+    Ring Nu
+  </a>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+    </html>
